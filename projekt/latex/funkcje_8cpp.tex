@@ -1,0 +1,117 @@
+\doxysection{Dokumentacja pliku funkcje.\+cpp}
+\label{funkcje_8cpp}\index{funkcje.cpp@{funkcje.cpp}}
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include $<$sstream$>$}\newline
+{\ttfamily \#include $<$fstream$>$}\newline
+{\ttfamily \#include $<$iomanip$>$}\newline
+{\ttfamily \#include $<$list$>$}\newline
+{\ttfamily \#include $<$algorithm$>$}\newline
+{\ttfamily \#include \char`\"{}funkcje.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}struktury.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}drzewo.\+h\char`\"{}}\newline
+\doxysubsection*{Definicje}
+\begin{DoxyCompactItemize}
+\item 
+\#define \textbf{ debug}(x)~std\+::cerr $<$$<$ \+\_\+\+\_\+\+FILE\+\_\+\+\_\+ $<$$<$ \char`\"{} (\char`\"{} $<$$<$ \+\_\+\+\_\+\+LINE\+\_\+\+\_\+ $<$$<$ \char`\"{}) \char`\"{} $<$$<$ \#x $<$$<$ \char`\"{} == \char`\"{} $<$$<$ (x) $<$$<$ std\+::endl
+\end{DoxyCompactItemize}
+\doxysubsection*{Funkcje}
+\begin{DoxyCompactItemize}
+\item 
+std\+::vector$<$ \textbf{ komenda} $>$ \textbf{ odczytaj\+\_\+komendy\+\_\+z\+\_\+pliku} (const std\+::string \&nazwa)
+\item 
+std\+::string \textbf{ to\+\_\+string} (const \textbf{ typ} \&t)
+\item 
+void \textbf{ test\+\_\+komend} (const std\+::vector$<$ \textbf{ komenda} $>$ \&ciag\+\_\+komend)
+\item 
+void \textbf{ help} (const std\+::string \&nazwa\+\_\+pliku\+\_\+wykonywalnego)
+\item 
+bool \textbf{ sprawdz\+\_\+parametry\+\_\+programu} (int argc, char $\ast$params[$\,$], std\+::string \&nazwa\+\_\+pliku)
+\item 
+void \textbf{ wykonaj\+\_\+komendy} (std\+::shared\+\_\+ptr$<$ \textbf{ wezel} $>$ \&p\+Korzen, const std\+::vector$<$ \textbf{ komenda} $>$ \&ciag\+\_\+komend)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Dokumentacja definicji}
+\mbox{\label{funkcje_8cpp_a1614f028c1fef258edfb81fb963609cb}} 
+\index{funkcje.cpp@{funkcje.cpp}!debug@{debug}}
+\index{debug@{debug}!funkcje.cpp@{funkcje.cpp}}
+\doxysubsubsection{debug}
+{\footnotesize\ttfamily \#define debug(\begin{DoxyParamCaption}\item[{}]{x }\end{DoxyParamCaption})~std\+::cerr $<$$<$ \+\_\+\+\_\+\+FILE\+\_\+\+\_\+ $<$$<$ \char`\"{} (\char`\"{} $<$$<$ \+\_\+\+\_\+\+LINE\+\_\+\+\_\+ $<$$<$ \char`\"{}) \char`\"{} $<$$<$ \#x $<$$<$ \char`\"{} == \char`\"{} $<$$<$ (x) $<$$<$ std\+::endl}
+
+
+
+\doxysubsection{Dokumentacja funkcji}
+\mbox{\label{funkcje_8cpp_acd5d6304c1ba1c22da4462bf1ef71a19}} 
+\index{funkcje.cpp@{funkcje.cpp}!help@{help}}
+\index{help@{help}!funkcje.cpp@{funkcje.cpp}}
+\doxysubsubsection{help()}
+{\footnotesize\ttfamily void help (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{nazwa\+\_\+pliku\+\_\+wykonywalnego }\end{DoxyParamCaption})}
+
+Funkcja wyswietlajaca notke przypominajaca jak uruchomic program 
+\begin{DoxyParams}[1]{Parametry}
+\mbox{\texttt{ in,out}}  & {\em nazwa\+\_\+pliku\+\_\+wykonywalnego} & Nazwa pliku wykonywalnego \\
+\hline
+\end{DoxyParams}
+\mbox{\label{funkcje_8cpp_ac8f8ad9a6c32714cd638c7b9b06c389a}} 
+\index{funkcje.cpp@{funkcje.cpp}!odczytaj\_komendy\_z\_pliku@{odczytaj\_komendy\_z\_pliku}}
+\index{odczytaj\_komendy\_z\_pliku@{odczytaj\_komendy\_z\_pliku}!funkcje.cpp@{funkcje.cpp}}
+\doxysubsubsection{odczytaj\_komendy\_z\_pliku()}
+{\footnotesize\ttfamily std\+::vector$<$\textbf{ komenda}$>$ odczytaj\+\_\+komendy\+\_\+z\+\_\+pliku (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{nazwa }\end{DoxyParamCaption})}
+
+Funkcja odczytuje z pliku wejsciowego komendy wraz z parametrami, pomijajac komentarze 
+\begin{DoxyParams}[1]{Parametry}
+\mbox{\texttt{ in,out}}  & {\em Nazwa} & strumienia pliku wejsciowego \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+Ciag komend 
+\end{DoxyReturn}
+\mbox{\label{funkcje_8cpp_acea69e15b36f656e57f0557c5561842d}} 
+\index{funkcje.cpp@{funkcje.cpp}!sprawdz\_parametry\_programu@{sprawdz\_parametry\_programu}}
+\index{sprawdz\_parametry\_programu@{sprawdz\_parametry\_programu}!funkcje.cpp@{funkcje.cpp}}
+\doxysubsubsection{sprawdz\_parametry\_programu()}
+{\footnotesize\ttfamily bool sprawdz\+\_\+parametry\+\_\+programu (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{char $\ast$}]{params[$\,$],  }\item[{std\+::string \&}]{nazwa\+\_\+pliku }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}[1]{Parametry}
+ & {\em argc} & Pierwszy parametr main \\
+\hline
+ & {\em params} & Drugi parametr main \\
+\hline
+\mbox{\texttt{ in,out}}  & {\em nazwa\+\_\+pliku} & Jezeli poprawne parametry wywolania programu, to tutaj bedzie odczytana nazwa pliku. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+true -- wszystko OK, parametry poprawne, false -- parametry bledne 
+\end{DoxyReturn}
+\mbox{\label{funkcje_8cpp_a0fa81622f1912e2b777e1749316c44c7}} 
+\index{funkcje.cpp@{funkcje.cpp}!test\_komend@{test\_komend}}
+\index{test\_komend@{test\_komend}!funkcje.cpp@{funkcje.cpp}}
+\doxysubsubsection{test\_komend()}
+{\footnotesize\ttfamily void test\+\_\+komend (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ \textbf{ komenda} $>$ \&}]{ciag\+\_\+komend }\end{DoxyParamCaption})}
+
+Testowe wypisanie na ekran nazwy kazdej komendy (i jej parametrow) 
+\begin{DoxyParams}[1]{Parametry}
+\mbox{\texttt{ in,out}}  & {\em ciag\+\_\+komend} & Komendy zebrane z pliku wejsciowego \\
+\hline
+\end{DoxyParams}
+\mbox{\label{funkcje_8cpp_afe44ef03d94f0699062f0e1cbac1f0cf}} 
+\index{funkcje.cpp@{funkcje.cpp}!to\_string@{to\_string}}
+\index{to\_string@{to\_string}!funkcje.cpp@{funkcje.cpp}}
+\doxysubsubsection{to\_string()}
+{\footnotesize\ttfamily std\+::string to\+\_\+string (\begin{DoxyParamCaption}\item[{const \textbf{ typ} \&}]{t }\end{DoxyParamCaption})}
+
+\mbox{\label{funkcje_8cpp_a71605e69e27bff3926e80c6171b0981c}} 
+\index{funkcje.cpp@{funkcje.cpp}!wykonaj\_komendy@{wykonaj\_komendy}}
+\index{wykonaj\_komendy@{wykonaj\_komendy}!funkcje.cpp@{funkcje.cpp}}
+\doxysubsubsection{wykonaj\_komendy()}
+{\footnotesize\ttfamily void wykonaj\+\_\+komendy (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \textbf{ wezel} $>$ \&}]{p\+Korzen,  }\item[{const std\+::vector$<$ \textbf{ komenda} $>$ \&}]{ciag\+\_\+komend }\end{DoxyParamCaption})}
+
+Funkcja wykonujaca komendy zebrane z pliku wejsciowego 
+\begin{DoxyParams}[1]{Parametry}
+\mbox{\texttt{ in,out}}  & {\em p\+Korzen} & Korzen drzewa \\
+\hline
+\mbox{\texttt{ in,out}}  & {\em ciag\+\_\+komend} & Komendy zebrane z pliku wejsciowego \\
+\hline
+\end{DoxyParams}

@@ -1,0 +1,58 @@
+\doxysection{Dokumentacja pliku struktury.\+h}
+\label{struktury_8h}\index{struktury.h@{struktury.h}}
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include $<$string$>$}\newline
+{\ttfamily \#include $<$memory$>$}\newline
+{\ttfamily \#include $<$list$>$}\newline
+\doxysubsection*{Komponenty}
+\begin{DoxyCompactItemize}
+\item 
+struct \textbf{ komenda}
+\begin{DoxyCompactList}\small\item\em Struktura komendy. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Wyliczenia}
+\begin{DoxyCompactItemize}
+\item 
+enum class \textbf{ typ} \{ \newline
+\textbf{ rzad}
+, \textbf{ add}
+, \textbf{ graph}
+, \textbf{ print}
+, \newline
+\textbf{ append}
+ \}
+\begin{DoxyCompactList}\small\item\em Typ wyliczeniowy okreslajacy rodzaje komend. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Dokumentacja typów wyliczanych}
+\mbox{\label{struktury_8h_a5574a1c4b4703a8658c3463fdbde74f3}} 
+\index{struktury.h@{struktury.h}!typ@{typ}}
+\index{typ@{typ}!struktury.h@{struktury.h}}
+\doxysubsubsection{typ}
+{\footnotesize\ttfamily enum \textbf{ typ}\hspace{0.3cm}{\ttfamily [strong]}}
+
+
+
+Typ wyliczeniowy okreslajacy rodzaje komend. 
+
+\begin{DoxyEnumFields}{Wartości wyliczeń}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{rzad@{rzad}!struktury.h@{struktury.h}}\index{struktury.h@{struktury.h}!rzad@{rzad}}}\mbox{\label{struktury_8h_a5574a1c4b4703a8658c3463fdbde74f3ad9fe95b868ae680d0d7250fc974b742d}} 
+rzad&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{add@{add}!struktury.h@{struktury.h}}\index{struktury.h@{struktury.h}!add@{add}}}\mbox{\label{struktury_8h_a5574a1c4b4703a8658c3463fdbde74f3a34ec78fcc91ffb1e54cd85e4a0924332}} 
+add&Rzad drzewa. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{graph@{graph}!struktury.h@{struktury.h}}\index{struktury.h@{struktury.h}!graph@{graph}}}\mbox{\label{struktury_8h_a5574a1c4b4703a8658c3463fdbde74f3af8b0b924ebd7046dbfa85a856e4682c8}} 
+graph&Komenda dodaj. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{print@{print}!struktury.h@{struktury.h}}\index{struktury.h@{struktury.h}!print@{print}}}\mbox{\label{struktury_8h_a5574a1c4b4703a8658c3463fdbde74f3af7531e2d0ea27233ce00b5f01c5bf335}} 
+print&Komenda wypisz drzewo na standardowe urzadzenie wyjsciowe. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{append@{append}!struktury.h@{struktury.h}}\index{struktury.h@{struktury.h}!append@{append}}}\mbox{\label{struktury_8h_a5574a1c4b4703a8658c3463fdbde74f3a9516dfb15f51c7ee19a4d46b8c0dbe1d}} 
+append&Komenda wypisz wartosci drzewa, lub zapisz graf do pliku. Inaczej print +, czyli dopisanie do pliku \\
+\hline
+
+\end{DoxyEnumFields}

@@ -1,0 +1,21 @@
+
+
+
+   rzad 1              % rzad B-drzewa
+   add 1 2 3 4 5 6 7 8 9 10 75 54 472 271 284 382 47 57 598
+
+graph                % wypisane B-drzewa
+
+nieistniejaca_komenda 45 67 43 56 7
+
+print                % wypisane liczb na ekran
+ add 3.45 -0.32
+graph
+ print
+
+print graf.txt     % wypisanie liczb do pliku
+add 23 56 67
+
+print + graf.txt   % dopisanie do pliku
+
+% prosze sprawdzic, co sie stanie w takiej sytuacji

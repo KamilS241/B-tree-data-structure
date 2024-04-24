@@ -1,0 +1,204 @@
+\doxysection{Dokumentacja pliku drzewo.\+h}
+\label{drzewo_8h}\index{drzewo.h@{drzewo.h}}
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include $<$string$>$}\newline
+{\ttfamily \#include $<$memory$>$}\newline
+{\ttfamily \#include $<$list$>$}\newline
+\doxysubsection*{Komponenty}
+\begin{DoxyCompactItemize}
+\item 
+struct \textbf{ wezel}
+\begin{DoxyCompactList}\small\item\em Struktura wezla drzewa. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Funkcje}
+\begin{DoxyCompactItemize}
+\item 
+void \textbf{ dodaj} (std\+::shared\+\_\+ptr$<$ \textbf{ wezel} $>$ \&p\+Korzen, const double wartosc)
+\item 
+void \textbf{ wypisz} (const std\+::shared\+\_\+ptr$<$ \textbf{ wezel} $>$ \&p\+Korzen, const int wciecie)
+\item 
+void \textbf{ zapisz\+\_\+do\+\_\+pliku} (std\+::ofstream \&plik, const std\+::shared\+\_\+ptr$<$ \textbf{ wezel} $>$ \&p\+Korzen, const int wciecie)
+\item 
+void \textbf{ wsortuj\+\_\+wartosc} (const double wartosc, std\+::list$<$ double $>$ \&wartosci)
+\item 
+bool \textbf{ czy\+\_\+za\+\_\+duzo\+\_\+w\+\_\+wezle} (const std\+::shared\+\_\+ptr$<$ \textbf{ wezel} $>$ p\+Wezel)
+\item 
+void \textbf{ gdy\+\_\+za\+\_\+duzo\+\_\+w\+\_\+wezle} (std\+::shared\+\_\+ptr$<$ \textbf{ wezel} $>$ \&p\+Wezel, double wartosc)
+\item 
+std\+::tuple$<$ std\+::shared\+\_\+ptr$<$ \textbf{ wezel} $>$, double, std\+::shared\+\_\+ptr$<$ \textbf{ wezel} $>$ $>$ \textbf{ podziel\+\_\+wezel} (std\+::shared\+\_\+ptr$<$ \textbf{ wezel} $>$ \&p\+Wezel)
+\item 
+void \textbf{ podmien\+\_\+wartosci} (std\+::shared\+\_\+ptr$<$ \textbf{ wezel} $>$ \&p\+Wezel, const double wartosc, std\+::shared\+\_\+ptr$<$ \textbf{ wezel} $>$ \&p\+Lewy, double mediana, std\+::shared\+\_\+ptr$<$ \textbf{ wezel} $>$ \&p\+Prawy)
+\item 
+std\+::shared\+\_\+ptr$<$ \textbf{ wezel} $>$ \textbf{ utworz\+\_\+nowy\+\_\+korzen\+\_\+drzewa} (std\+::shared\+\_\+ptr$<$ \textbf{ wezel} $>$ \&p\+Lewy, const double mediana, std\+::shared\+\_\+ptr$<$ \textbf{ wezel} $>$ \&p\+Prawy)
+\item 
+std\+::shared\+\_\+ptr$<$ \textbf{ wezel} $>$ \textbf{ znajdz\+\_\+adres\+\_\+potomka} (const std\+::shared\+\_\+ptr$<$ \textbf{ wezel} $>$ p\+Wezel, const double wartosc)
+\item 
+void \textbf{ wsortuj\+\_\+potomka} (const std\+::shared\+\_\+ptr$<$ \textbf{ wezel} $>$ \&potomek, std\+::list$<$ std\+::shared\+\_\+ptr$<$ \textbf{ wezel} $>$$>$ \&lista\+\_\+potomkow)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Dokumentacja funkcji}
+\mbox{\label{drzewo_8h_a4e2411ffbf535720b17675c29ef516b5}} 
+\index{drzewo.h@{drzewo.h}!czy\_za\_duzo\_w\_wezle@{czy\_za\_duzo\_w\_wezle}}
+\index{czy\_za\_duzo\_w\_wezle@{czy\_za\_duzo\_w\_wezle}!drzewo.h@{drzewo.h}}
+\doxysubsubsection{czy\_za\_duzo\_w\_wezle()}
+{\footnotesize\ttfamily bool czy\+\_\+za\+\_\+duzo\+\_\+w\+\_\+wezle (\begin{DoxyParamCaption}\item[{const std\+::shared\+\_\+ptr$<$ \textbf{ wezel} $>$}]{p\+Wezel }\end{DoxyParamCaption})}
+
+Funkcja sprawdza czy w wezle nie ma zbyt wielu wartosci 
+\begin{DoxyParams}{Parametry}
+{\em p\+Wezel} & Wezel do sprawdzenia \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+true -- za duzo wartosci w wezle, potrzebna modyfikacja, false -- poprawna ilosc wartosci w wezle 
+\end{DoxyReturn}
+\mbox{\label{drzewo_8h_ae0c9412284502e1faf695e1a5d89aa87}} 
+\index{drzewo.h@{drzewo.h}!dodaj@{dodaj}}
+\index{dodaj@{dodaj}!drzewo.h@{drzewo.h}}
+\doxysubsubsection{dodaj()}
+{\footnotesize\ttfamily void dodaj (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \textbf{ wezel} $>$ \&}]{p\+Korzen,  }\item[{const double}]{wartosc }\end{DoxyParamCaption})}
+
+Funkcja dodajaca wartosc do B-\/drzewa. 
+\begin{DoxyParams}[1]{Parametry}
+\mbox{\texttt{ in,out}}  & {\em p\+Korzen} & Korzen drzewa (jezeli drzewo jest puste, ma wartosc nullptr) \\
+\hline
+ & {\em wartosc} & Wartosc do dodania do drzewa \\
+\hline
+\end{DoxyParams}
+\mbox{\label{drzewo_8h_a039e80d382a535d533512efae9fb026a}} 
+\index{drzewo.h@{drzewo.h}!gdy\_za\_duzo\_w\_wezle@{gdy\_za\_duzo\_w\_wezle}}
+\index{gdy\_za\_duzo\_w\_wezle@{gdy\_za\_duzo\_w\_wezle}!drzewo.h@{drzewo.h}}
+\doxysubsubsection{gdy\_za\_duzo\_w\_wezle()}
+{\footnotesize\ttfamily void gdy\+\_\+za\+\_\+duzo\+\_\+w\+\_\+wezle (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \textbf{ wezel} $>$ \&}]{p\+Wezel,  }\item[{double}]{wartosc }\end{DoxyParamCaption})}
+
+Funkcja ktora stanowi posrednik miedzy funkcja dodaj, a funkcjami ktore modyfikuja wezly 
+\begin{DoxyParams}[1]{Parametry}
+\mbox{\texttt{ in,out}}  & {\em p\+Wezel} & Wezel drzewa \\
+\hline
+ & {\em wartosc} & Wartosc ktora spowodowala przeciazenie wezla \\
+\hline
+\end{DoxyParams}
+\mbox{\label{drzewo_8h_abc8c5e404bba50613efa566dbe7887ce}} 
+\index{drzewo.h@{drzewo.h}!podmien\_wartosci@{podmien\_wartosci}}
+\index{podmien\_wartosci@{podmien\_wartosci}!drzewo.h@{drzewo.h}}
+\doxysubsubsection{podmien\_wartosci()}
+{\footnotesize\ttfamily void podmien\+\_\+wartosci (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \textbf{ wezel} $>$ \&}]{p\+Wezel,  }\item[{const double}]{wartosc,  }\item[{std\+::shared\+\_\+ptr$<$ \textbf{ wezel} $>$ \&}]{p\+Lewy,  }\item[{double}]{mediana,  }\item[{std\+::shared\+\_\+ptr$<$ \textbf{ wezel} $>$ \&}]{p\+Prawy }\end{DoxyParamCaption})}
+
+Funkcja usuwa zbyt duzy wezel i wklada na jego miejsce 2 nowe wezly (lewy i prawy) oraz mediane do rodzica 
+\begin{DoxyParams}[1]{Parametry}
+\mbox{\texttt{ in,out}}  & {\em p\+Wezel} & Rozbity wezel \\
+\hline
+ & {\em wartosc} & Wartosc ktora wywolala rozbicie \\
+\hline
+\mbox{\texttt{ in,out}}  & {\em p\+Lewy} & Lewy wezel utworzony po rozbiciu oryginalnego wezla \\
+\hline
+ & {\em mediana} & Mediana, czyli wartosc srodkowa, ktora idzie to rodzica wezla \\
+\hline
+\mbox{\texttt{ in,out}}  & {\em p\+Prawy} & Prawy wezel utworzony po rozbiciu oryginalnego wezla \\
+\hline
+\end{DoxyParams}
+\mbox{\label{drzewo_8h_a88a34269bb6c8c18d7cc895f56bfb36c}} 
+\index{drzewo.h@{drzewo.h}!podziel\_wezel@{podziel\_wezel}}
+\index{podziel\_wezel@{podziel\_wezel}!drzewo.h@{drzewo.h}}
+\doxysubsubsection{podziel\_wezel()}
+{\footnotesize\ttfamily std\+::tuple$<$std\+::shared\+\_\+ptr$<$\textbf{ wezel}$>$, double, std\+::shared\+\_\+ptr$<$\textbf{ wezel}$>$ $>$ podziel\+\_\+wezel (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \textbf{ wezel} $>$ \&}]{p\+Wezel }\end{DoxyParamCaption})}
+
+Funkcja dzieli zbyt duzy wezel na prawa i lewa wartosc oraz mediane i przekazuje do funkcji gdy\+\_\+za\+\_\+duzo\+\_\+w\+\_\+wezle, ktora decyduje co robic dalej 
+\begin{DoxyParams}[1]{Parametry}
+\mbox{\texttt{ in,out}}  & {\em p\+Wezel} & Wezel drzewa do podzielenia \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+Lewy wezel 
+
+Mediana 
+
+Prawy wezel 
+\end{DoxyReturn}
+\mbox{\label{drzewo_8h_a8ebccba9e23bcae21668d15b0ed4a66f}} 
+\index{drzewo.h@{drzewo.h}!utworz\_nowy\_korzen\_drzewa@{utworz\_nowy\_korzen\_drzewa}}
+\index{utworz\_nowy\_korzen\_drzewa@{utworz\_nowy\_korzen\_drzewa}!drzewo.h@{drzewo.h}}
+\doxysubsubsection{utworz\_nowy\_korzen\_drzewa()}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$\textbf{ wezel}$>$ utworz\+\_\+nowy\+\_\+korzen\+\_\+drzewa (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \textbf{ wezel} $>$ \&}]{p\+Lewy,  }\item[{const double}]{mediana,  }\item[{std\+::shared\+\_\+ptr$<$ \textbf{ wezel} $>$ \&}]{p\+Prawy }\end{DoxyParamCaption})}
+
+Funkcja przyjmuje lewy i prawy wezel oraz mediane (po rozbiciu starego korzenia), tworzy nowy korzen, dodaje do niego lewe i prawe potomki, zwraca wskaznik na nowy korzen, ktory podmieniamy z oryginalnym wskaznikiem 
+\begin{DoxyParams}[1]{Parametry}
+\mbox{\texttt{ in,out}}  & {\em p\+Lewy} & Lewy wezel \\
+\hline
+ & {\em mediana} & Mediana \\
+\hline
+\mbox{\texttt{ in,out}}  & {\em p\+Prawy} & Prawy wezel \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+Nowy korzen 
+\end{DoxyReturn}
+\mbox{\label{drzewo_8h_ab6df5b02144199c90b7c409929c5c8bf}} 
+\index{drzewo.h@{drzewo.h}!wsortuj\_potomka@{wsortuj\_potomka}}
+\index{wsortuj\_potomka@{wsortuj\_potomka}!drzewo.h@{drzewo.h}}
+\doxysubsubsection{wsortuj\_potomka()}
+{\footnotesize\ttfamily void wsortuj\+\_\+potomka (\begin{DoxyParamCaption}\item[{const std\+::shared\+\_\+ptr$<$ \textbf{ wezel} $>$ \&}]{potomek,  }\item[{std\+::list$<$ std\+::shared\+\_\+ptr$<$ \textbf{ wezel} $>$$>$ \&}]{lista\+\_\+potomkow }\end{DoxyParamCaption})}
+
+Funkcja dodaje potomka do listy potomkow, wsadzajac go w odpowiednie miejsce, tak by lista byla posortowana rosnaco wg pierwszych wartosci potomkow 
+\begin{DoxyParams}[1]{Parametry}
+\mbox{\texttt{ in,out}}  & {\em potomek} & Potomek do wsortowania \\
+\hline
+\mbox{\texttt{ in,out}}  & {\em lista\+\_\+potomkow} & Lista do ktorej wsortujemy potomka \\
+\hline
+\end{DoxyParams}
+\mbox{\label{drzewo_8h_a20b02d2afe14781baf78dc045d7b5503}} 
+\index{drzewo.h@{drzewo.h}!wsortuj\_wartosc@{wsortuj\_wartosc}}
+\index{wsortuj\_wartosc@{wsortuj\_wartosc}!drzewo.h@{drzewo.h}}
+\doxysubsubsection{wsortuj\_wartosc()}
+{\footnotesize\ttfamily void wsortuj\+\_\+wartosc (\begin{DoxyParamCaption}\item[{const double}]{wartosc,  }\item[{std\+::list$<$ double $>$ \&}]{wartosci }\end{DoxyParamCaption})}
+
+Funkcja dodaje wartosc do listy i ja sortuje 
+\begin{DoxyParams}[1]{Parametry}
+ & {\em wartosc} & Dodawana wartosc \\
+\hline
+\mbox{\texttt{ in,out}}  & {\em wartosci} & Lista wartosci do ktorej dodajemy \\
+\hline
+\end{DoxyParams}
+\mbox{\label{drzewo_8h_a4ca491bef34bd9e2a1b73d353b5b6b6e}} 
+\index{drzewo.h@{drzewo.h}!wypisz@{wypisz}}
+\index{wypisz@{wypisz}!drzewo.h@{drzewo.h}}
+\doxysubsubsection{wypisz()}
+{\footnotesize\ttfamily void wypisz (\begin{DoxyParamCaption}\item[{const std\+::shared\+\_\+ptr$<$ \textbf{ wezel} $>$ \&}]{p\+Korzen,  }\item[{const int}]{wciecie }\end{DoxyParamCaption})}
+
+Funkcja wypisujaca graf drzewa na standardowe wyjscie 
+\begin{DoxyParams}[1]{Parametry}
+\mbox{\texttt{ in,out}}  & {\em p\+Korzen} & Korzen drzewa \\
+\hline
+ & {\em wciecie} & Wspolczynnik wciecia \\
+\hline
+\end{DoxyParams}
+\mbox{\label{drzewo_8h_a53d337f27e61fc9d70b49cf29f07ad71}} 
+\index{drzewo.h@{drzewo.h}!zapisz\_do\_pliku@{zapisz\_do\_pliku}}
+\index{zapisz\_do\_pliku@{zapisz\_do\_pliku}!drzewo.h@{drzewo.h}}
+\doxysubsubsection{zapisz\_do\_pliku()}
+{\footnotesize\ttfamily void zapisz\+\_\+do\+\_\+pliku (\begin{DoxyParamCaption}\item[{std\+::ofstream \&}]{plik,  }\item[{const std\+::shared\+\_\+ptr$<$ \textbf{ wezel} $>$ \&}]{p\+Korzen,  }\item[{const int}]{wciecie }\end{DoxyParamCaption})}
+
+Funkcja zapisujaca graf drzewa do pliku 
+\begin{DoxyParams}[1]{Parametry}
+\mbox{\texttt{ in,out}}  & {\em plik} & Strumien wyjsciowy do pliku \\
+\hline
+\mbox{\texttt{ in,out}}  & {\em p\+Korzen} & Korzen drzewa \\
+\hline
+ & {\em wciecie} & Wspolczynnik wciecia \\
+\hline
+\end{DoxyParams}
+\mbox{\label{drzewo_8h_ac4ff1cfe08cfa7c934ca4e90bf2857e9}} 
+\index{drzewo.h@{drzewo.h}!znajdz\_adres\_potomka@{znajdz\_adres\_potomka}}
+\index{znajdz\_adres\_potomka@{znajdz\_adres\_potomka}!drzewo.h@{drzewo.h}}
+\doxysubsubsection{znajdz\_adres\_potomka()}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$\textbf{ wezel}$>$ znajdz\+\_\+adres\+\_\+potomka (\begin{DoxyParamCaption}\item[{const std\+::shared\+\_\+ptr$<$ \textbf{ wezel} $>$}]{p\+Wezel,  }\item[{const double}]{wartosc }\end{DoxyParamCaption})}
+
+Funkcja znajduje adres potomka do ktorego kierujemy wartosc 
+\begin{DoxyParams}{Parametry}
+{\em p\+Wezel} & Rodzic, wsrod ktorego potomkow szukamy takiego, do ktorego ma trafic wartosc \\
+\hline
+{\em wartosc} & Wartosc dla ktorej szukamy potomka \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+Szukany potomek 
+\end{DoxyReturn}

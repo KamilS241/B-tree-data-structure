@@ -1,0 +1,109 @@
+\doxysection{Dokumentacja struktury wezel}
+\label{structwezel}\index{wezel@{wezel}}
+
+
+Struktura wezla drzewa.  
+
+
+
+
+{\ttfamily \#include $<$drzewo.\+h$>$}
+
+\doxysubsection*{Atrybuty publiczne}
+\begin{DoxyCompactItemize}
+\item 
+std\+::list$<$ double $>$ \textbf{ wartosci}
+\item 
+std\+::list$<$ std\+::shared\+\_\+ptr$<$ \textbf{ wezel} $>$ $>$ \textbf{ potomki}
+\begin{DoxyCompactList}\small\item\em Wartosci w wezle. \end{DoxyCompactList}\item 
+std\+::weak\+\_\+ptr$<$ \textbf{ wezel} $>$ \textbf{ p\+Rodzic}
+\begin{DoxyCompactList}\small\item\em Potomki wezla. \end{DoxyCompactList}\item 
+std\+::shared\+\_\+ptr$<$ \textbf{ wezel} $>$ \textbf{ wskaznik\+\_\+na\+\_\+nowy\+\_\+korzen} = nullptr
+\begin{DoxyCompactList}\small\item\em Rodzic wezla. \end{DoxyCompactList}\item 
+bool \textbf{ czy\+Lisc} \{true\}
+\begin{DoxyCompactList}\small\item\em Wskaznik ktory przechowuje adres na nowy korzen, gdy dokonujemy jego zmiany. \end{DoxyCompactList}\item 
+bool \textbf{ czy\+Korzen\+Do\+Zmiany} \{false\}
+\begin{DoxyCompactList}\small\item\em Zmienna okreslajaca czy wezel jest lisciem. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Statyczne atrybuty publiczne}
+\begin{DoxyCompactItemize}
+\item 
+static double \textbf{ rzad}
+\begin{DoxyCompactList}\small\item\em Zmienna okreslajaca czy dany wezel jest korzeniem ktory musimy zmienic na nowy. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Opis szczegółowy}
+Struktura wezla drzewa. 
+
+\doxysubsection{Dokumentacja atrybutów składowych}
+\mbox{\label{structwezel_a07753ec85d71ebf68209cd12e65355bc}} 
+\index{wezel@{wezel}!czyKorzenDoZmiany@{czyKorzenDoZmiany}}
+\index{czyKorzenDoZmiany@{czyKorzenDoZmiany}!wezel@{wezel}}
+\doxysubsubsection{czyKorzenDoZmiany}
+{\footnotesize\ttfamily bool wezel\+::czy\+Korzen\+Do\+Zmiany \{false\}}
+
+
+
+Zmienna okreslajaca czy wezel jest lisciem. 
+
+\mbox{\label{structwezel_a628767abc545c9de0cd25bf85966ff08}} 
+\index{wezel@{wezel}!czyLisc@{czyLisc}}
+\index{czyLisc@{czyLisc}!wezel@{wezel}}
+\doxysubsubsection{czyLisc}
+{\footnotesize\ttfamily bool wezel\+::czy\+Lisc \{true\}}
+
+
+
+Wskaznik ktory przechowuje adres na nowy korzen, gdy dokonujemy jego zmiany. 
+
+\mbox{\label{structwezel_a3a519fbb0d1698b854c0ebf366a4addb}} 
+\index{wezel@{wezel}!potomki@{potomki}}
+\index{potomki@{potomki}!wezel@{wezel}}
+\doxysubsubsection{potomki}
+{\footnotesize\ttfamily std\+::list$<$std\+::shared\+\_\+ptr$<$\textbf{ wezel}$>$ $>$ wezel\+::potomki}
+
+
+
+Wartosci w wezle. 
+
+\mbox{\label{structwezel_a8873bcb0826b7a348b3171015af672d6}} 
+\index{wezel@{wezel}!pRodzic@{pRodzic}}
+\index{pRodzic@{pRodzic}!wezel@{wezel}}
+\doxysubsubsection{pRodzic}
+{\footnotesize\ttfamily std\+::weak\+\_\+ptr$<$\textbf{ wezel}$>$ wezel\+::p\+Rodzic}
+
+
+
+Potomki wezla. 
+
+\mbox{\label{structwezel_a8510a7fef454fc7e2194a26945dba96a}} 
+\index{wezel@{wezel}!rzad@{rzad}}
+\index{rzad@{rzad}!wezel@{wezel}}
+\doxysubsubsection{rzad}
+{\footnotesize\ttfamily double wezel\+::rzad\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Zmienna okreslajaca czy dany wezel jest korzeniem ktory musimy zmienic na nowy. 
+
+\mbox{\label{structwezel_ac812c8d50ad8753b949365fb316149b3}} 
+\index{wezel@{wezel}!wartosci@{wartosci}}
+\index{wartosci@{wartosci}!wezel@{wezel}}
+\doxysubsubsection{wartosci}
+{\footnotesize\ttfamily std\+::list$<$double$>$ wezel\+::wartosci}
+
+\mbox{\label{structwezel_aac97c8d478e881c92750d2afa06c0c7d}} 
+\index{wezel@{wezel}!wskaznik\_na\_nowy\_korzen@{wskaznik\_na\_nowy\_korzen}}
+\index{wskaznik\_na\_nowy\_korzen@{wskaznik\_na\_nowy\_korzen}!wezel@{wezel}}
+\doxysubsubsection{wskaznik\_na\_nowy\_korzen}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$\textbf{ wezel}$>$ wezel\+::wskaznik\+\_\+na\+\_\+nowy\+\_\+korzen = nullptr}
+
+
+
+Rodzic wezla. 
+
+
+
+Dokumentacja dla tej struktury została wygenerowana z plików\+:\begin{DoxyCompactItemize}
+\item 
+\textbf{ drzewo.\+h}\item 
+\textbf{ drzewo.\+cpp}\end{DoxyCompactItemize}

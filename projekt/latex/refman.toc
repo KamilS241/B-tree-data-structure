@@ -1,0 +1,78 @@
+\@ifundefined {etoctocstyle}{\let \etoc@startlocaltoc \@gobble \let \etoc@settocdepth \@gobble \let \etoc@depthtag \@gobble \let \etoc@setlocaltop \@gobble }{}
+\babel@toc {polish}{}
+\contentsline {chapter}{\numberline {1}Indeks klas}{1}{}%
+\contentsline {section}{\numberline {1.1}Lista klas}{1}{}%
+\contentsline {chapter}{\numberline {2}Indeks plików}{3}{}%
+\contentsline {section}{\numberline {2.1}Lista plików}{3}{}%
+\contentsline {chapter}{\numberline {3}Dokumentacja klas}{5}{}%
+\contentsline {section}{\numberline {3.1}Dokumentacja struktury komenda}{5}{}%
+\contentsline {subsection}{\numberline {3.1.1}Opis szczegółowy}{5}{}%
+\contentsline {subsection}{\numberline {3.1.2}Dokumentacja atrybutów składowych}{5}{}%
+\contentsline {subsubsection}{\numberline {3.1.2.1}nazwa\_pliku}{5}{}%
+\contentsline {subsubsection}{\numberline {3.1.2.2}params}{6}{}%
+\contentsline {subsubsection}{\numberline {3.1.2.3}rodzaj}{6}{}%
+\contentsline {section}{\numberline {3.2}Dokumentacja struktury wezel}{6}{}%
+\contentsline {subsection}{\numberline {3.2.1}Opis szczegółowy}{6}{}%
+\contentsline {subsection}{\numberline {3.2.2}Dokumentacja atrybutów składowych}{7}{}%
+\contentsline {subsubsection}{\numberline {3.2.2.1}czyKorzenDoZmiany}{7}{}%
+\contentsline {subsubsection}{\numberline {3.2.2.2}czyLisc}{7}{}%
+\contentsline {subsubsection}{\numberline {3.2.2.3}potomki}{7}{}%
+\contentsline {subsubsection}{\numberline {3.2.2.4}pRodzic}{7}{}%
+\contentsline {subsubsection}{\numberline {3.2.2.5}rzad}{7}{}%
+\contentsline {subsubsection}{\numberline {3.2.2.6}wartosci}{7}{}%
+\contentsline {subsubsection}{\numberline {3.2.2.7}wskaznik\_na\_nowy\_korzen}{7}{}%
+\contentsline {chapter}{\numberline {4}Dokumentacja plików}{9}{}%
+\contentsline {section}{\numberline {4.1}Dokumentacja pliku drzewo.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}cpp}{9}{}%
+\contentsline {subsection}{\numberline {4.1.1}Dokumentacja definicji}{10}{}%
+\contentsline {subsubsection}{\numberline {4.1.1.1}debug}{10}{}%
+\contentsline {subsection}{\numberline {4.1.2}Dokumentacja funkcji}{10}{}%
+\contentsline {subsubsection}{\numberline {4.1.2.1}czy\_za\_duzo\_w\_wezle()}{10}{}%
+\contentsline {subsubsection}{\numberline {4.1.2.2}dodaj()}{10}{}%
+\contentsline {subsubsection}{\numberline {4.1.2.3}gdy\_za\_duzo\_w\_wezle()}{11}{}%
+\contentsline {subsubsection}{\numberline {4.1.2.4}podmien\_wartosci()}{11}{}%
+\contentsline {subsubsection}{\numberline {4.1.2.5}podziel\_wezel()}{11}{}%
+\contentsline {subsubsection}{\numberline {4.1.2.6}utworz\_nowy\_korzen\_drzewa()}{12}{}%
+\contentsline {subsubsection}{\numberline {4.1.2.7}wsortuj\_potomka()}{12}{}%
+\contentsline {subsubsection}{\numberline {4.1.2.8}wsortuj\_wartosc()}{12}{}%
+\contentsline {subsubsection}{\numberline {4.1.2.9}wypisz()}{13}{}%
+\contentsline {subsubsection}{\numberline {4.1.2.10}zapisz\_do\_pliku()}{13}{}%
+\contentsline {subsubsection}{\numberline {4.1.2.11}znajdz\_adres\_potomka()}{13}{}%
+\contentsline {section}{\numberline {4.2}Dokumentacja pliku drzewo.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{14}{}%
+\contentsline {subsection}{\numberline {4.2.1}Dokumentacja funkcji}{14}{}%
+\contentsline {subsubsection}{\numberline {4.2.1.1}czy\_za\_duzo\_w\_wezle()}{14}{}%
+\contentsline {subsubsection}{\numberline {4.2.1.2}dodaj()}{15}{}%
+\contentsline {subsubsection}{\numberline {4.2.1.3}gdy\_za\_duzo\_w\_wezle()}{15}{}%
+\contentsline {subsubsection}{\numberline {4.2.1.4}podmien\_wartosci()}{15}{}%
+\contentsline {subsubsection}{\numberline {4.2.1.5}podziel\_wezel()}{16}{}%
+\contentsline {subsubsection}{\numberline {4.2.1.6}utworz\_nowy\_korzen\_drzewa()}{16}{}%
+\contentsline {subsubsection}{\numberline {4.2.1.7}wsortuj\_potomka()}{17}{}%
+\contentsline {subsubsection}{\numberline {4.2.1.8}wsortuj\_wartosc()}{17}{}%
+\contentsline {subsubsection}{\numberline {4.2.1.9}wypisz()}{17}{}%
+\contentsline {subsubsection}{\numberline {4.2.1.10}zapisz\_do\_pliku()}{18}{}%
+\contentsline {subsubsection}{\numberline {4.2.1.11}znajdz\_adres\_potomka()}{18}{}%
+\contentsline {section}{\numberline {4.3}Dokumentacja pliku funkcje.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}cpp}{18}{}%
+\contentsline {subsection}{\numberline {4.3.1}Dokumentacja definicji}{19}{}%
+\contentsline {subsubsection}{\numberline {4.3.1.1}debug}{19}{}%
+\contentsline {subsection}{\numberline {4.3.2}Dokumentacja funkcji}{19}{}%
+\contentsline {subsubsection}{\numberline {4.3.2.1}help()}{19}{}%
+\contentsline {subsubsection}{\numberline {4.3.2.2}odczytaj\_komendy\_z\_pliku()}{19}{}%
+\contentsline {subsubsection}{\numberline {4.3.2.3}sprawdz\_parametry\_programu()}{20}{}%
+\contentsline {subsubsection}{\numberline {4.3.2.4}test\_komend()}{20}{}%
+\contentsline {subsubsection}{\numberline {4.3.2.5}to\_string()}{20}{}%
+\contentsline {subsubsection}{\numberline {4.3.2.6}wykonaj\_komendy()}{21}{}%
+\contentsline {section}{\numberline {4.4}Dokumentacja pliku funkcje.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{21}{}%
+\contentsline {subsection}{\numberline {4.4.1}Dokumentacja funkcji}{21}{}%
+\contentsline {subsubsection}{\numberline {4.4.1.1}help()}{21}{}%
+\contentsline {subsubsection}{\numberline {4.4.1.2}odczytaj\_komendy\_z\_pliku()}{22}{}%
+\contentsline {subsubsection}{\numberline {4.4.1.3}sprawdz\_parametry\_programu()}{22}{}%
+\contentsline {subsubsection}{\numberline {4.4.1.4}test\_komend()}{22}{}%
+\contentsline {subsubsection}{\numberline {4.4.1.5}wykonaj\_komendy()}{23}{}%
+\contentsline {section}{\numberline {4.5}Dokumentacja pliku main.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}cpp}{23}{}%
+\contentsline {subsection}{\numberline {4.5.1}Dokumentacja definicji}{23}{}%
+\contentsline {subsubsection}{\numberline {4.5.1.1}debug}{24}{}%
+\contentsline {subsection}{\numberline {4.5.2}Dokumentacja funkcji}{24}{}%
+\contentsline {subsubsection}{\numberline {4.5.2.1}main()}{24}{}%
+\contentsline {subsubsection}{\numberline {4.5.2.2}test()}{24}{}%
+\contentsline {section}{\numberline {4.6}Dokumentacja pliku struktury.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{24}{}%
+\contentsline {subsection}{\numberline {4.6.1}Dokumentacja typów wyliczanych}{24}{}%
+\contentsline {subsubsection}{\numberline {4.6.1.1}typ}{24}{}%

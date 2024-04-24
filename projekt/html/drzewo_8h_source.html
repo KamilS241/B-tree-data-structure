@@ -1,0 +1,166 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>B-Drzewo: Plik źródłowy drzewo.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">B-Drzewo
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Wygenerowano przez Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Szukaj','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Szukaj');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('drzewo_8h_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">drzewo.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="drzewo_8h.html">Idź do dokumentacji tego pliku.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160; </div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#ifndef DRZEWO_H</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#define DRZEWO_H</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160; </div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &lt;vector&gt;</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &lt;memory&gt;</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &lt;list&gt;</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160; </div>
+<div class="line"><a name="l00011"></a><span class="lineno"><a class="line" href="structwezel.html">   11</a></span>&#160;<span class="keyword">struct </span><a class="code" href="structwezel.html">wezel</a></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;{</div>
+<div class="line"><a name="l00013"></a><span class="lineno"><a class="line" href="structwezel.html#ac812c8d50ad8753b949365fb316149b3">   13</a></span>&#160;    std::list&lt;double&gt; <a class="code" href="structwezel.html#ac812c8d50ad8753b949365fb316149b3">wartosci</a>;   </div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    </div>
+<div class="line"><a name="l00015"></a><span class="lineno"><a class="line" href="structwezel.html#a3a519fbb0d1698b854c0ebf366a4addb">   15</a></span>&#160;    std::list&lt;std::shared_ptr&lt;wezel&gt;&gt; <a class="code" href="structwezel.html#a3a519fbb0d1698b854c0ebf366a4addb">potomki</a>; </div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160; </div>
+<div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="structwezel.html#a8873bcb0826b7a348b3171015af672d6">   17</a></span>&#160;    std::weak_ptr&lt;wezel&gt;<a class="code" href="structwezel.html#a8873bcb0826b7a348b3171015af672d6">pRodzic</a>; </div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160; </div>
+<div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="structwezel.html#aac97c8d478e881c92750d2afa06c0c7d">   19</a></span>&#160;    std::shared_ptr&lt;wezel&gt;<a class="code" href="structwezel.html#aac97c8d478e881c92750d2afa06c0c7d">wskaznik_na_nowy_korzen</a> = <span class="keyword">nullptr</span>; </div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    </div>
+<div class="line"><a name="l00021"></a><span class="lineno"><a class="line" href="structwezel.html#a628767abc545c9de0cd25bf85966ff08">   21</a></span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="structwezel.html#a628767abc545c9de0cd25bf85966ff08">czyLisc</a> {<span class="keyword">true</span>}; </div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160; </div>
+<div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="structwezel.html#a07753ec85d71ebf68209cd12e65355bc">   23</a></span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="structwezel.html#a07753ec85d71ebf68209cd12e65355bc">czyKorzenDoZmiany</a> {<span class="keyword">false</span>}; </div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    </div>
+<div class="line"><a name="l00025"></a><span class="lineno"><a class="line" href="structwezel.html#a8510a7fef454fc7e2194a26945dba96a">   25</a></span>&#160;    <span class="keyword">static</span> <span class="keywordtype">double</span> <a class="code" href="structwezel.html#a8510a7fef454fc7e2194a26945dba96a">rzad</a>;  </div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;};</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160; </div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="keywordtype">void</span> <a class="code" href="drzewo_8h.html#ae0c9412284502e1faf695e1a5d89aa87">dodaj</a> (std::shared_ptr&lt;wezel&gt;&amp; pKorzen, <span class="keyword">const</span> <span class="keywordtype">double</span> wartosc);</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160; </div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="keywordtype">void</span> <a class="code" href="drzewo_8h.html#a4ca491bef34bd9e2a1b73d353b5b6b6e">wypisz</a>(<span class="keyword">const</span> std::shared_ptr&lt;wezel&gt; &amp; pKorzen, <span class="keyword">const</span> <span class="keywordtype">int</span> wciecie);</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160; </div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="keywordtype">void</span> <a class="code" href="drzewo_8h.html#a53d337f27e61fc9d70b49cf29f07ad71">zapisz_do_pliku</a>(std::ofstream&amp; plik,<span class="keyword">const</span> std::shared_ptr &lt;wezel&gt;&amp; pKorzen, <span class="keyword">const</span> <span class="keywordtype">int</span> wciecie);</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160; </div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;<span class="keywordtype">void</span> <a class="code" href="drzewo_8h.html#a20b02d2afe14781baf78dc045d7b5503">wsortuj_wartosc</a>(<span class="keyword">const</span> <span class="keywordtype">double</span> wartosc, std::list&lt;double&gt;&amp; wartosci);</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160; </div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;<span class="keywordtype">bool</span> <a class="code" href="drzewo_8h.html#a4e2411ffbf535720b17675c29ef516b5">czy_za_duzo_w_wezle</a>(<span class="keyword">const</span> std::shared_ptr &lt;wezel&gt; pWezel);</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160; </div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;<span class="keywordtype">void</span> <a class="code" href="drzewo_8h.html#a039e80d382a535d533512efae9fb026a">gdy_za_duzo_w_wezle</a>(std::shared_ptr&lt;wezel&gt;&amp; pWezel, <span class="keywordtype">double</span> wartosc);</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160; </div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;std::tuple&lt;std::shared_ptr&lt;wezel&gt;, double, std::shared_ptr&lt;wezel&gt;&gt; <a class="code" href="drzewo_8h.html#a88a34269bb6c8c18d7cc895f56bfb36c">podziel_wezel</a>(std::shared_ptr&lt;wezel&gt;&amp; pWezel);</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160; </div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;<span class="keywordtype">void</span> <a class="code" href="drzewo_8h.html#abc8c5e404bba50613efa566dbe7887ce">podmien_wartosci</a>(std::shared_ptr&lt;wezel&gt;&amp; pWezel, <span class="keyword">const</span> <span class="keywordtype">double</span> wartosc, std::shared_ptr&lt;wezel&gt;&amp; pLewy, <span class="keywordtype">double</span> mediana, std::shared_ptr&lt;wezel&gt;&amp; pPrawy);</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160; </div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;std::shared_ptr&lt;wezel&gt; <a class="code" href="drzewo_8h.html#a8ebccba9e23bcae21668d15b0ed4a66f">utworz_nowy_korzen_drzewa</a>(std::shared_ptr&lt;wezel&gt;&amp; pLewy, <span class="keyword">const</span> <span class="keywordtype">double</span> mediana, std::shared_ptr&lt;wezel&gt;&amp; pPrawy);</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160; </div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;std::shared_ptr&lt;wezel&gt; <a class="code" href="drzewo_8h.html#ac4ff1cfe08cfa7c934ca4e90bf2857e9">znajdz_adres_potomka</a>(<span class="keyword">const</span> std::shared_ptr&lt;wezel&gt; pWezel,<span class="keyword">const</span> <span class="keywordtype">double</span> wartosc);</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160; </div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;<span class="keywordtype">void</span> <a class="code" href="drzewo_8h.html#ab6df5b02144199c90b7c409929c5c8bf">wsortuj_potomka</a>(<span class="keyword">const</span> std::shared_ptr&lt;wezel&gt;&amp; potomek, std::list&lt;std::shared_ptr&lt;wezel&gt;&gt;&amp; lista_potomkow);</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160; </div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="ttc" id="adrzewo_8h_html_a039e80d382a535d533512efae9fb026a"><div class="ttname"><a href="drzewo_8h.html#a039e80d382a535d533512efae9fb026a">gdy_za_duzo_w_wezle</a></div><div class="ttdeci">void gdy_za_duzo_w_wezle(std::shared_ptr&lt; wezel &gt; &amp;pWezel, double wartosc)</div><div class="ttdef"><b>Definition:</b> drzewo.cpp:97</div></div>
+<div class="ttc" id="adrzewo_8h_html_a20b02d2afe14781baf78dc045d7b5503"><div class="ttname"><a href="drzewo_8h.html#a20b02d2afe14781baf78dc045d7b5503">wsortuj_wartosc</a></div><div class="ttdeci">void wsortuj_wartosc(const double wartosc, std::list&lt; double &gt; &amp;wartosci)</div><div class="ttdef"><b>Definition:</b> drzewo.cpp:221</div></div>
+<div class="ttc" id="adrzewo_8h_html_a4ca491bef34bd9e2a1b73d353b5b6b6e"><div class="ttname"><a href="drzewo_8h.html#a4ca491bef34bd9e2a1b73d353b5b6b6e">wypisz</a></div><div class="ttdeci">void wypisz(const std::shared_ptr&lt; wezel &gt; &amp;pKorzen, const int wciecie)</div><div class="ttdef"><b>Definition:</b> drzewo.cpp:228</div></div>
+<div class="ttc" id="adrzewo_8h_html_a4e2411ffbf535720b17675c29ef516b5"><div class="ttname"><a href="drzewo_8h.html#a4e2411ffbf535720b17675c29ef516b5">czy_za_duzo_w_wezle</a></div><div class="ttdeci">bool czy_za_duzo_w_wezle(const std::shared_ptr&lt; wezel &gt; pWezel)</div><div class="ttdef"><b>Definition:</b> drzewo.cpp:193</div></div>
+<div class="ttc" id="adrzewo_8h_html_a53d337f27e61fc9d70b49cf29f07ad71"><div class="ttname"><a href="drzewo_8h.html#a53d337f27e61fc9d70b49cf29f07ad71">zapisz_do_pliku</a></div><div class="ttdeci">void zapisz_do_pliku(std::ofstream &amp;plik, const std::shared_ptr&lt; wezel &gt; &amp;pKorzen, const int wciecie)</div><div class="ttdef"><b>Definition:</b> drzewo.cpp:258</div></div>
+<div class="ttc" id="adrzewo_8h_html_a88a34269bb6c8c18d7cc895f56bfb36c"><div class="ttname"><a href="drzewo_8h.html#a88a34269bb6c8c18d7cc895f56bfb36c">podziel_wezel</a></div><div class="ttdeci">std::tuple&lt; std::shared_ptr&lt; wezel &gt;, double, std::shared_ptr&lt; wezel &gt; &gt; podziel_wezel(std::shared_ptr&lt; wezel &gt; &amp;pWezel)</div><div class="ttdef"><b>Definition:</b> drzewo.cpp:52</div></div>
+<div class="ttc" id="adrzewo_8h_html_a8ebccba9e23bcae21668d15b0ed4a66f"><div class="ttname"><a href="drzewo_8h.html#a8ebccba9e23bcae21668d15b0ed4a66f">utworz_nowy_korzen_drzewa</a></div><div class="ttdeci">std::shared_ptr&lt; wezel &gt; utworz_nowy_korzen_drzewa(std::shared_ptr&lt; wezel &gt; &amp;pLewy, const double mediana, std::shared_ptr&lt; wezel &gt; &amp;pPrawy)</div><div class="ttdef"><b>Definition:</b> drzewo.cpp:156</div></div>
+<div class="ttc" id="adrzewo_8h_html_ab6df5b02144199c90b7c409929c5c8bf"><div class="ttname"><a href="drzewo_8h.html#ab6df5b02144199c90b7c409929c5c8bf">wsortuj_potomka</a></div><div class="ttdeci">void wsortuj_potomka(const std::shared_ptr&lt; wezel &gt; &amp;potomek, std::list&lt; std::shared_ptr&lt; wezel &gt;&gt; &amp;lista_potomkow)</div><div class="ttdef"><b>Definition:</b> drzewo.cpp:198</div></div>
+<div class="ttc" id="adrzewo_8h_html_abc8c5e404bba50613efa566dbe7887ce"><div class="ttname"><a href="drzewo_8h.html#abc8c5e404bba50613efa566dbe7887ce">podmien_wartosci</a></div><div class="ttdeci">void podmien_wartosci(std::shared_ptr&lt; wezel &gt; &amp;pWezel, const double wartosc, std::shared_ptr&lt; wezel &gt; &amp;pLewy, double mediana, std::shared_ptr&lt; wezel &gt; &amp;pPrawy)</div><div class="ttdef"><b>Definition:</b> drzewo.cpp:71</div></div>
+<div class="ttc" id="adrzewo_8h_html_ac4ff1cfe08cfa7c934ca4e90bf2857e9"><div class="ttname"><a href="drzewo_8h.html#ac4ff1cfe08cfa7c934ca4e90bf2857e9">znajdz_adres_potomka</a></div><div class="ttdeci">std::shared_ptr&lt; wezel &gt; znajdz_adres_potomka(const std::shared_ptr&lt; wezel &gt; pWezel, const double wartosc)</div><div class="ttdef"><b>Definition:</b> drzewo.cpp:168</div></div>
+<div class="ttc" id="adrzewo_8h_html_ae0c9412284502e1faf695e1a5d89aa87"><div class="ttname"><a href="drzewo_8h.html#ae0c9412284502e1faf695e1a5d89aa87">dodaj</a></div><div class="ttdeci">void dodaj(std::shared_ptr&lt; wezel &gt; &amp;pKorzen, const double wartosc)</div><div class="ttdef"><b>Definition:</b> drzewo.cpp:13</div></div>
+<div class="ttc" id="astructwezel_html"><div class="ttname"><a href="structwezel.html">wezel</a></div><div class="ttdoc">Struktura wezla drzewa.</div><div class="ttdef"><b>Definition:</b> drzewo.h:12</div></div>
+<div class="ttc" id="astructwezel_html_a07753ec85d71ebf68209cd12e65355bc"><div class="ttname"><a href="structwezel.html#a07753ec85d71ebf68209cd12e65355bc">wezel::czyKorzenDoZmiany</a></div><div class="ttdeci">bool czyKorzenDoZmiany</div><div class="ttdoc">Zmienna okreslajaca czy wezel jest lisciem.</div><div class="ttdef"><b>Definition:</b> drzewo.h:23</div></div>
+<div class="ttc" id="astructwezel_html_a3a519fbb0d1698b854c0ebf366a4addb"><div class="ttname"><a href="structwezel.html#a3a519fbb0d1698b854c0ebf366a4addb">wezel::potomki</a></div><div class="ttdeci">std::list&lt; std::shared_ptr&lt; wezel &gt; &gt; potomki</div><div class="ttdoc">Wartosci w wezle.</div><div class="ttdef"><b>Definition:</b> drzewo.h:15</div></div>
+<div class="ttc" id="astructwezel_html_a628767abc545c9de0cd25bf85966ff08"><div class="ttname"><a href="structwezel.html#a628767abc545c9de0cd25bf85966ff08">wezel::czyLisc</a></div><div class="ttdeci">bool czyLisc</div><div class="ttdoc">Wskaznik ktory przechowuje adres na nowy korzen, gdy dokonujemy jego zmiany.</div><div class="ttdef"><b>Definition:</b> drzewo.h:21</div></div>
+<div class="ttc" id="astructwezel_html_a8510a7fef454fc7e2194a26945dba96a"><div class="ttname"><a href="structwezel.html#a8510a7fef454fc7e2194a26945dba96a">wezel::rzad</a></div><div class="ttdeci">static double rzad</div><div class="ttdoc">Zmienna okreslajaca czy dany wezel jest korzeniem ktory musimy zmienic na nowy.</div><div class="ttdef"><b>Definition:</b> drzewo.h:25</div></div>
+<div class="ttc" id="astructwezel_html_a8873bcb0826b7a348b3171015af672d6"><div class="ttname"><a href="structwezel.html#a8873bcb0826b7a348b3171015af672d6">wezel::pRodzic</a></div><div class="ttdeci">std::weak_ptr&lt; wezel &gt; pRodzic</div><div class="ttdoc">Potomki wezla.</div><div class="ttdef"><b>Definition:</b> drzewo.h:17</div></div>
+<div class="ttc" id="astructwezel_html_aac97c8d478e881c92750d2afa06c0c7d"><div class="ttname"><a href="structwezel.html#aac97c8d478e881c92750d2afa06c0c7d">wezel::wskaznik_na_nowy_korzen</a></div><div class="ttdeci">std::shared_ptr&lt; wezel &gt; wskaznik_na_nowy_korzen</div><div class="ttdoc">Rodzic wezla.</div><div class="ttdef"><b>Definition:</b> drzewo.h:19</div></div>
+<div class="ttc" id="astructwezel_html_ac812c8d50ad8753b949365fb316149b3"><div class="ttname"><a href="structwezel.html#ac812c8d50ad8753b949365fb316149b3">wezel::wartosci</a></div><div class="ttdeci">std::list&lt; double &gt; wartosci</div><div class="ttdef"><b>Definition:</b> drzewo.h:13</div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="drzewo_8h.html">drzewo.h</a></li>
+    <li class="footer">Wygenerowano przez <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
+  </ul>
+</div>
+</body>
+</html>
